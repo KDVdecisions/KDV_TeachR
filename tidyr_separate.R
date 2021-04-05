@@ -59,26 +59,33 @@ detailData <- tidyr::separate(detailData,
 
 # BONUS MATERIAL ----
 
-# why check data and why read help?... 
-# to know how the functions behave under exceptions
-# if your data are small enough to easily review, its easy to catch things like recycling or dropping values
+# Why check data and why read help?... 
+# ...to know how the functions behave under exceptions
+# If your data are small enough to easily review, its easy to catch things like recycling or dropping values.
+# But if your data are large, it can be difficult to catch such errors.
 
-# We want to split the data, but it does not cleanly follow the rules
+# Suppose the data to not cleanly follow a single pattern of two parts.
 oddObs <- data.frame(Site = c("North 1", 
                               "North 2",
                               "South 1",
                               "South 1 alt",
                               "South 2",
                               "West"))
-# In tidyverse, data will never be coerced, dropped etc without providing a warning - this code will give two helpful warnings
-# Warnings are not errors. Your code runs - but R encountered something unexpected and made a choice ... R is telling you so you know to inspect data.  This function helpfully tells you where to look.
-# Default - not reviewing (and therefore accepting) optional arguments
+
+# In tidyverse, data will never be coerced, dropped etc without providing a warning, 
+# ...so this code will give two helpful warnings.
+# Warnings are not errors. Your code runs - but R encountered something unexpected and made a choice.
+# ...R is telling you so you know to inspect data.  This function helpfully tells you where to look.
+
+# Default behaviour if you do not review (and therefore accept) optional arguments:
 default <- tidyr::separate(oddObs, 
                            col = Site, 
                            into = c("Region", "SiteId"),
                            sep = " ")
 
-# If you want to keep the extra site information , you could do these two steps
+# If you want to keep the extra site information, there are several ways you could do this.  
+# One method would be to to do it in two steps:
+
 # Step 1
 alt1 <- tidyr::separate(oddObs, 
                         col = Site, 
