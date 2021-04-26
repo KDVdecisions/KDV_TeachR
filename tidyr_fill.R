@@ -32,6 +32,6 @@ play <- tidyr::fill(raw, Gender:Play, .direction="down")
 # PRACTICE ----
 
 # Load in the file Carcross_PopData.xlsx.  Remember to check the top and bottom of this
-# file to make sure evryything loads cleanly.  Once you have the complete dataframe, 
+# file to make sure everything loads cleanly.  Once you have the complete dataframe, 
 # fill the missing data for Year and Month.
 
