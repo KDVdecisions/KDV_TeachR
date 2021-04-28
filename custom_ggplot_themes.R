@@ -38,7 +38,7 @@ showtext_auto()
 
 # CUSTOM GGPLOT THEME ----
 
-theme_yukon <- function(fontFamily = "Monts"){ 
+theme_yukon <- function(fontFamily = "Montserrat"){ 
 	
 	font <- fontFamily   # assign font family up front
 	
