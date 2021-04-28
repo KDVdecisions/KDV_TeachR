@@ -108,6 +108,14 @@ iterate_many <- function(x, a, b, c){
 
 # PRACTICE ----
 
-# 1) Create a function, mad_lib() that takes four arguments: a noun, an adjective, a verb, and an adverb.  You can use the function paste() or sprintf() to combine these words into the mad lib: "The [adjective] [noun] [verb] [adverb] all day and all night.".  The function should return the completed sentence.
+# 1) Create a function that takes distance in feet as it's one argument and returns distance in meters.
 
-# 2) Update the function so that instead of one noun, the user can provide a vector of nouns and your function will randomly choose one noun from the vector.  You can use the function sample() to sample value(s) from a vector.
+# 2) Modify the above function by adding an argument that allows the user to specify if they want the result in meters or centimeters.  You will probably find the function ifelse() helpful.
+
+# 3) Create a function, mad_lib() that takes four arguments: a noun, an adjective, a verb, and an adverb.  You can use the function paste() or sprintf() to combine these words into the mad lib: "The [adjective] [noun] [verb] [adverb] all day and all night.".  The function should return the completed sentence.
+
+# 4) Update the function so that instead of one noun, the user can provide a vector of nouns and your function will randomly choose one noun from the vector.  You can use the function sample() to sample value(s) from a vector.
+
+# FOR MORE INFORMATION ----
+
+# I like this introductory Software Carpentry tutorial on creating functions in R: https://swcarpentry.github.io/r-novice-inflammation/02-func-R/
